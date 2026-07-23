@@ -32,6 +32,7 @@ const account1 = {
         }
         if(amount > this.balance || this.balance <= 0){
             console.log("Not Enogh Funds");
+            return;
         }
         this.balance -= amount;
         this.history.push({
