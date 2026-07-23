@@ -1,6 +1,6 @@
 # 🏦 Simple Banking System (JavaScript)
 
-A simple banking system implemented in **vanilla JavaScript** using object-oriented principles with object literals. The project demonstrates how to manage bank accounts, perform transactions, and keep a transaction history while reinforcing fundamental JavaScript concepts such as object methods and the `this` keyword.
+A simple banking system implemented in **JavaScript** using object-oriented principles with object literals. The project demonstrates how to manage bank accounts, perform transactions, and keep a transaction history while reinforcing fundamental JavaScript concepts such as object methods and the `this` keyword.
 
 ---
 
