@@ -3,6 +3,7 @@
 function CheckFalsy(variable){
     return !variable;
 }
+
 console.log(CheckFalsy(false));
 console.log(CheckFalsy(undefined));
 console.log(CheckFalsy(null));
