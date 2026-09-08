@@ -18,34 +18,7 @@ class User {
   }
 }
 
-//change
-// class email extends User{
-//     constructor(id, name, email, phone, address, type){
-//         super(id,name,email,phone,address,type);
-//     }
-//     sendEmail(message) {
-//         console.log(
-//         `Sending email to ${this.email}: ${message}`
-//         );
-//     }
 
-//     sendSMS(message) {
-//         console.log(
-//         `Sending SMS to ${this.phone}: ${message}`
-//         );
-//     }
-
-//     generateProfileReport() {
-//     console.log(
-//       `Generating profile report for ${this.name}`
-//     );
-//     }
-//     sendEmailToOwner(message) {
-//         console.log(
-//         `Sending email to restaurant owner: ${message}`
-//         );
-//     }
-// }
 
 class Restaurant {
   #id;
@@ -71,17 +44,7 @@ class Restaurant {
   get id(){
     return this.#id;
   }
-//   saveToDatabase() {
-//     console.log(
-//       `Saving restaurant ${this.id}...`
-//     );
-//   }
 
-//   sendEmailToOwner(message) {
-//     console.log(
-//       `Sending email to restaurant owner: ${message}`
-//     );
-//   }
 }
 
 
@@ -95,21 +58,7 @@ class Dish {
     this.type = type;
   }
  
-//   calculatePrice() {
-//     if (this.type === "pizza") {
-//       return this.price * 0.9;
-//     }
 
-//     if (this.type === "burger") {
-//       return this.price * 0.95;
-//     }
-
-//     if (this.type === "dessert") {
-//       return this.price * 0.8;
-//     }
-
-//     return this.price;
-//   }
 }
 
 
@@ -136,91 +85,6 @@ class Order {
     `Generating invoice for order ${this.id}`
   );
 }
-  // calculateTotal() {
-  //   let total = 0;
-
-  //   for (const item of this.items) {
-  //     total +=
-  //       item.dish.calculatePrice() *
-  //       item.quantity;
-  //   }
-
-  //   return total;
-  // }
-
-  // pay(paymentMethod, amount) {
-  //   if (paymentMethod === "card") {
-  //     console.log(
-  //       `Processing credit card payment: ${amount}`
-  //     );
-  //   }
-
-  //   if (paymentMethod === "paypal") {
-  //     console.log(
-  //       `Processing PayPal payment: ${amount}`
-  //     );
-  //   }
-
-  //   if (paymentMethod === "crypto") {
-  //     console.log(
-  //       `Processing cryptocurrency payment: ${amount}`
-  //     );
-  //   }
-
-  //   if (paymentMethod === "cash") {
-  //     console.log(
-  //       `Payment will be made with cash: ${amount}`
-  //     );
-  //   }
-  // }
-
-  // deliver(deliveryType) {
-  //   if (deliveryType === "courier") {
-  //     console.log(
-  //       "Sending courier..."
-  //     );
-  //   }
-
-  //   if (deliveryType === "pickup") {
-  //     console.log(
-  //       "Order will be picked up from restaurant..."
-  //     );
-  //   }
-
-  //   if (deliveryType === "drone") {
-  //     console.log(
-  //       "Sending drone..."
-  //     );
-  //   }
-  // }
-
-  // sendNotification(type) {
-  //   if (type === "email") {
-  //     console.log(
-  //       `Sending email to ${this.user.email}`
-  //     );
-  //   }
-
-  //   if (type === "sms") {
-  //     console.log(
-  //       "Sending SMS..."
-  //     );
-  //   }
-
-  //   if (type === "push") {
-  //     console.log(
-  //       "Sending push notification..."
-  //     );
-  //   }
-  // }
-
-//   save() {
-//     console.log(
-//       `Saving order ${this.id} to database...`
-//     );
-//   }
-
- 
 
   cancel() {
     if (this.status === "delivered") {
@@ -234,66 +98,6 @@ class Order {
 }
 
 
-
-// class PaymentService {
-//   pay(type, amount) {
-//     if(type !== "cash"){
-//         console.log(`Charging ${type}: ${amount}`)
-//     }else if (type === "cash") {
-//       console.log(
-//         `Cash payment: ${amount}`
-//       );
-//     }
-//     // if (type === "card") {
-//     //   console.log(
-//     //     `Charging card: ${amount}`
-//     //   );
-//     // }
-
-//     // if (type === "paypal") {
-//     //   console.log(
-//     //     `Charging PayPal: ${amount}`
-//     //   );
-//     // }
-
-//     // if (type === "crypto") {
-//     //   console.log(
-//     //     `Charging crypto wallet: ${amount}`
-//     //   );
-//     // }
-
-    
-//   }
-
-//   refund(type, amount) {
-//     if(type !== "cash"){
-//         console.log(`Refunding ${type}: ${amount}`);
-//     }else if (type === "cash") {
-//       throw new Error(
-//         "Cash cannot be refunded"
-//       );
-//     }
-//     // if (type === "card") {
-//     //   console.log(
-//     //     `Refunding card: ${amount}`
-//     //   );
-//     // }
-
-//     // if (type === "paypal") {
-//     //   console.log(
-//     //     `Refunding PayPal: ${amount}`
-//     //   );
-//     // }
-
-//     // if (type === "crypto") {
-//     //   console.log(
-//     //     `Refunding crypto: ${amount}`
-//     //   );
-//     // }
-
-    
-//   }
-// }
 
 class PaymentService {
   constructor(){
@@ -400,23 +204,7 @@ class NotificationService {
   }
   notify(user, message) {
     throw new Error ("Abstract method");
-    // if (type === "email") {
-    //   console.log(
-    //     `Email to ${user.email}: ${message}`
-    //   );
-    // }
-
-    // if (type === "sms") {
-    //   console.log(
-    //     `SMS to ${user.phone}: ${message}`
-    //   );
-    // }
-
-    // if (type === "push") {
-    //   console.log(
-    //     `Push notification to user ${user.id}: ${message}`
-    //   );
-    // }
+    
   }
 }
 
@@ -448,25 +236,7 @@ class DiscountService {
     calculateDiscount(object){
         throw new Error("Abstract class");
     }
-//    calculateDiscount(user, order) {
-//     if (user.type === "regular") {
-//       return 0;
-//     }
-
-//     if (user.type === "vip") {
-//       return order.calculateTotal() * 0.1;
-//     }
-
-//     if (user.type === "employee") {
-//       return order.calculateTotal() * 0.3;
-//     }
-
-//     if (user.type === "new_user") {
-//       return order.calculateTotal() * 0.2;
-//     }
-
-//     return 0;
-//   }
+    
 }
 
 class DiscountRegular extends DiscountService{
